@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import WelcomePage from './components/WelcomePage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainDashboard from './components/MainDashboard';
+import WorkplaceContext from './components/contexts/WorkplaceContext';
+import { WorkPlace } from './components/models/WorkPlace';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-black w-screen h-screen">
+      <WorkplaceContext.Provider value={{workplace:new WorkPlace("","")}}>
+      <BrowserRouter>
+      <Routes>
+        <Route index element={<WelcomePage></WelcomePage>}/>
+        <Route path='/dashboard' element={<MainDashboard></MainDashboard>}/>
+      </Routes>
+      </BrowserRouter>
+      </WorkplaceContext.Provider>
     </div>
   );
 }
