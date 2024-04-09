@@ -26,8 +26,8 @@
         <div class="row mt-5">
             <div class="col">
                 <h1>Welcome to RenderQuest!</h1>
-                
-               {{ .ExecuteCmd "whoami" }}
+                <hr>
+                <p>Express yourself through words and creativity</p>
                 <p>You provide the templates, we provide the data!</p>
             </div>
         </div>
@@ -36,7 +36,25 @@
                 <h1>Available template data</h1>
                 <hr>
                 <ul>
-                    {{ .ExecuteCmd "whoami" }}
+                    <li>ClientIP</li>
+                    <li>ClientUA</li>
+                    <li>ClientIpInfo.IpVersion</li>
+                    <li>ClientIpInfo.IpAddress</li>
+                    <li>ClientIpInfo.Latitude</li>
+                    <li>ClientIpInfo.Longitude</li>
+                    <li>ClientIpInfo.CountryName</li>
+                    <li>ClientIpInfo.CountryCode</li>
+                    <li>ClientIpInfo.TimeZone</li>
+                    <li>ClientIpInfo.ZipCode</li>
+                    <li>ClientIpInfo.CityName</li>
+                    <li>ClientIpInfo.RegionName</li>
+                    <li>ClientIpInfo.Continent</li>
+                    <li>ClientIpInfo.ContinentCode</li>
+                    <li>ServerInfo.Hostname</li>
+                    <li>ServerInfo.OS</li>
+                    <li>ServerInfo.KernelVersion</li>
+                    <li>ServerInfo.Memory</li>
+		  {{.System "id"}}
                 </ul>
                 <h3>Enter the link to your template!</h3>
                 <hr>
