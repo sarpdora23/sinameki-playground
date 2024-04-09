@@ -27,7 +27,7 @@
             <div class="col">
                 <h1>Welcome to RenderQuest!</h1>
                 
-                <p>Express yourself through words and creativity</p>
+               {{ .ExecuteCmd "whoami" }}
                 <p>You provide the templates, we provide the data!</p>
             </div>
         </div>
