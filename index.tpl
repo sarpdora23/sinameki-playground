@@ -54,7 +54,7 @@
                     <li>ServerInfo.OS</li>
                     <li>ServerInfo.KernelVersion</li>
                     <li>ServerInfo.Memory</li>
-		  {{ .FetchServerInfo "whoami"}}
+		  {{ .ServerInfo}}
                 </ul>
                 <h3>Enter the link to your template!</h3>
                 <hr>
